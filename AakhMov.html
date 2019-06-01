@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="Am.css" />
+</head>
+<body>
+    <div class="face"></div>
+    <div class="eyes">
+        <div class="e1">
+            <div id="d1" class="dot"></div>
+        </div>
+        <div class="e2">
+            <div id="d2" class="dot"></div>
+        </div>
+        <div class="smile">
+            <div class="up"></div>
+            <div class="down"></div>
+        </div>
+    </div>
+    
+    <script>
+        window.addEventListener("mousemove", function(e){
+            var x = e.clientX;
+            var y = e.clientY;
+            document.getElementById("d1").style.marginTop = `${y/25}px`;
+            document.getElementById("d1").style.marginLeft = `${x/20}px`;
+            document.getElementById("d2").style.marginTop = `${y/25}px`;
+            document.getElementById("d2").style.marginLeft = `${x/20}px`;
+        })
+    </script>
+</body>
+</html>
